@@ -12,8 +12,7 @@ blueprint:
       description: The lock which triggers the snapshot creation
       selector:
           entity:
-            domain: binary_sensor
-            device_class: lock
+            domain: lock
 
     camera:
       name: Camera
@@ -67,8 +66,8 @@ blueprint:
 trigger:
   platform: state
   entity_id: !input door_lock
-  from: "off"
-  to: "on"
+  from: "locked"
+  to: "unlocked"
 
 variables:
   door_lock: !input door_lock
