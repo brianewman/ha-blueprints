@@ -12,7 +12,6 @@ blueprint:
       description: The lock which triggers the snapshot creation
       selector:
           entity:
-            integration: lock
 
     camera:
       name: Camera
